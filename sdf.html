@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Lua Code Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  code {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: block;
+    margin-top: 10px;
+    white-space: pre-wrap;
+  }
+</style>
+</head>
+<body>
+  <h1>Dynamic Lua Code</h1>
+  <code id="lua-code"></code>
+
+  <script>
+    // Function to fetch new Lua code and update the display
+    function updateLuaCode() {
+      // Replace this URL with your actual Lua code source
+      fetch('key.lua')
+        .then(response => response.text())
+        .then(luaCode => {
+          document.getElementById('lua-code').textContent = luaCode;
+        })
+        .catch(error => console.error('Error fetching Lua code:', error));
+    }
+
+    // Initial call to update Lua code
+    updateLuaCode();
+
+    // Refresh Lua code every 5 seconds
+    setInterval(updateLuaCode, 5000);
+  </script>
+</body>
+</html>
