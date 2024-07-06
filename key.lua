@@ -1,7 +1,3 @@
-local ValidKeys = {}
-
-ValidKeys.Keys = {
-  "Test"
+return {
+"Test"
 }
-
-return ValidKeys
