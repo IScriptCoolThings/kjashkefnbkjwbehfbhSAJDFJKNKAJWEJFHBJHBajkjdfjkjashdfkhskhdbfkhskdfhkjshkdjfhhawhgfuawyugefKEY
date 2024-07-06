@@ -1,6 +1,7 @@
-local ValidKeys = {
-  "FreeKeyForRedWyre",
-  "DivineIsTheBestScripterEverFrFrNoCapOng"
+local ValidKeys = {}
+
+ValidKeys.Keys = {
+  "Test"
 }
 
 return ValidKeys
